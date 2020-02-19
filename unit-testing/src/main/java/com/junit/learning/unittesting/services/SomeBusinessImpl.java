@@ -23,14 +23,10 @@ public class SomeBusinessImpl {
 	}
 	
 	public int calculateSumUsingDataService() {
-		int sum = 0;
-		
 		int[] data = someDataService.retrieveAllDatas();
-		
-		for(int value : data) {
-			sum+=value;
-		}
-		return sum;
+		return this.calculateSum(data);
 	}
+	
+	
 
 }
