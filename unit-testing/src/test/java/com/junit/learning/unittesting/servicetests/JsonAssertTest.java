@@ -20,14 +20,12 @@ public class JsonAssertTest {
 	public void jsonAssertNoStrictCheckWithspaces() throws JSONException {
 		String expectedResponse = "{\"id\": 1,\"itemName\":\"cell phone\",\"price\":10}";
 		JSONAssert.assertEquals(expectedResponse, actualResponse, false);
-		
 	}
 	
 	@Test
 	public void jsonAssertWithoutEscape_char() throws JSONException {
 		String expectedResponse = "{id: 1,itemName:\"cell phone\",price:10}";
 		JSONAssert.assertEquals(expectedResponse, actualResponse, false);
-		
 	}
 
 }

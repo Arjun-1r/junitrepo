@@ -1,11 +1,24 @@
 package com.junit.learning.unittesting.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Transient;
+
+@Entity(name="Item")
 public class Item {
 
+	@Id
 	private int id;
 	private String itemName;
 	private int price;
 	private int quantity;
+	@Transient
+	private int value;
+	
+	protected Item(){
+		
+	}
+	
 	public Item(int id, String itemName, int price, int quantity) {
 		super();
 		this.id = id;
@@ -36,6 +49,13 @@ public class Item {
 	}
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
+	}
+	
+	public int getValue() {
+		return value;
+	}
+	public void setValue(int value) {
+		this.value = value;
 	}
 	@Override
 	public String toString() {
