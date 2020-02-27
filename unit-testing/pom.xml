@@ -34,14 +34,7 @@
 			<artifactId>h2</artifactId>
 		</dependency>
 
- <dependency>
-      <groupId>org.junit.jupiter</groupId>
-      <artifactId>junit-jupiter</artifactId>
-      <version>5.5.2</version>
-      <scope>compile</scope>
-    </dependency>
-
-		<dependency>
+        <dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
 			<scope>runtime</scope>
@@ -56,8 +49,19 @@
 					<groupId>org.junit.vintage</groupId>
 					<artifactId>junit-vintage-engine</artifactId>
 				</exclusion>
+				  <exclusion>
+                    <groupId>junit</groupId>
+                    <artifactId>junit</artifactId>
+                </exclusion>
 			</exclusions>
 		</dependency>
+		
+		<dependency>
+             <groupId>org.junit.jupiter</groupId>
+             <artifactId>junit-jupiter-engine</artifactId>
+             <scope>test</scope>
+         </dependency>
+		
 	</dependencies>
 
 	<build>
